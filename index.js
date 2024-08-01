@@ -1,4 +1,6 @@
 // notes: let firstCard = math.floor(math.random() * 11) + 2; let secondCard = math.floor(math.random() * 11) + 2; let sum = firstCard + secondCard
+let messageEl = document.getElementById("message-el");
+console.log(messageEl);
 
 let firstCard = 6
 let secondCard = 9
