@@ -16,8 +16,12 @@ let isAlive = true
 
 let display = ""    //display message so console.log once at the end
 
+function startGame(){
+    renderGame()
+}
+
 // blackjack conditions set
-function startGame() {
+function renderGame() {
 if (sum <= 20){
     display = "Do you want to draw a new card?";
 } else if (sum === 21){
@@ -38,5 +42,5 @@ if (sum <= 20){
 function newCard(){
     let card = 6;
     sum += card;            // sum = sum + card
-    startGame();
+    renderGame();
 }
