@@ -1,6 +1,8 @@
 // notes: let firstCard = math.floor(math.random() * 11) + 2; let secondCard = math.floor(math.random() * 11) + 2; let sum = firstCard + secondCard
 let messageEl = document.getElementById("message-el");
 console.log(messageEl);
+let sumEl = document.getElementById("sum-el");
+console.log(sumEl)
 
 let firstCard = 6
 let secondCard = 9
@@ -26,5 +28,6 @@ if (sum <= 20){
 
 // CASH OUT
     messageEl.textContent = display
+    sumEl.textContent = "Sum: " + sum
 // conditions console.log(hasBlackJack) console.log(isAlive) console.log(display) alert(display)      so an answer can be seen
 }
