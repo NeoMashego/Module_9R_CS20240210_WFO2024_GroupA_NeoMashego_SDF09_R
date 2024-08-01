@@ -8,18 +8,21 @@ let sum = firstCard + secondCard
 let hasBlackJack = false    //default answer
 let isAlive = true
 
+let message = ""    //display message so console.log once at the end
+
 // blackjack conditions set
 
 if (sum <= 20){
-    console.log("Do you want to draw a new card? 🙂")
+    message = "Do you want to draw a new card? 🙂";
 } else if (sum === 21){
-    console.log("Wohoo! You've got Blackjack! 🥳")
+   message = "Wohoo! You've got Blackjack! 🥳";
     hasBlackJack = true
 } else {
-    console.log("You're out of the game! 😭")
+    message = "You're out of the game! 😭";
     isAlive = false
 }
 
 // CASH OUT conditions
 console.log(hasBlackJack)
 console.log(isAlive)
+console.log(message)
