@@ -10,6 +10,7 @@ let firstCard = 6
 let secondCard = 9
 
 let sum = firstCard + secondCard
+let deck = [firstCard, secondCard]
 
 let hasBlackJack = false    //default answer
 let isAlive = true
@@ -35,7 +36,7 @@ if (sum <= 20){
 // CASH OUT
     messageEl.textContent = display
     sumEl.textContent = "Sum: " + sum
-    cardEl.textContent = "Card: " + firstCard + " " + secondCard
+    cardEl.textContent = "Card: " + deck[0] + " " + deck[1]
                     // conditions console.log(hasBlackJack) console.log(isAlive) console.log(display) alert(display)      so an answer can be seen
 }
 
