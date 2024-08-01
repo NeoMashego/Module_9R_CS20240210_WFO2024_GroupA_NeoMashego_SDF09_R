@@ -3,6 +3,8 @@
 
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
+// notes: let firstCard = math.floor(math.random() * 11) + 2; let secondCard = math.floor(math.random() * 11) + 2; let sum = firstCard + secondCard
+
 let firstCard = 6
 let secondCard = 9
 
