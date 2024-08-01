@@ -36,5 +36,7 @@ if (sum <= 20){
 }
 
 function newCard(){
-    
+    let card = 6;
+    sum += card;            // sum = sum + card
+    startGame();
 }
