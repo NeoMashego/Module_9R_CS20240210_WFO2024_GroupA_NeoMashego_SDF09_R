@@ -32,5 +32,9 @@ if (sum <= 20){
     messageEl.textContent = display
     sumEl.textContent = "Sum: " + sum
     cardEl.textContent = "Card: " + firstCard + " " + secondCard
-// conditions console.log(hasBlackJack) console.log(isAlive) console.log(display) alert(display)      so an answer can be seen
+                    // conditions console.log(hasBlackJack) console.log(isAlive) console.log(display) alert(display)      so an answer can be seen
+}
+
+function newCard(){
+    
 }
