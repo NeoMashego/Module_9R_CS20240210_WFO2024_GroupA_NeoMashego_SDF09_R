@@ -15,14 +15,16 @@ let display = ""    //display message so console.log once at the end
 // blackjack conditions set
 function startGame() {
 if (sum <= 20){
-    display = "Do you want to draw a new card? 🙂";
+    display = "Do you want to draw a new card?";
 } else if (sum === 21){
-   display = "Wohoo! You've got Blackjack! 🥳";
+   display = "Wohoo! You've got Blackjack!";
     hasBlackJack = true
 } else {
-    display = "You're out of the game! 😭";
+    display = "Sorry, You're out of the game!";
     isAlive = false
 }
-// CASH OUT conditions console.log(hasBlackJack) console.log(isAlive)
-console.log(display)
+
+// CASH OUT
+    messageEl.textContent = display
+// conditions console.log(hasBlackJack) console.log(isAlive) console.log(display) alert(display)      so an answer can be seen
 }
