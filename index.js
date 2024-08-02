@@ -1,18 +1,20 @@
 // notes: let firstCard = math.floor(math.random() * 11) + 2; let secondCard = math.floor(math.random() * 11) + 2; let sum = firstCard + secondCard
-let messageEl = document.getElementById("message-el");
-console.log(messageEl);
-let sumEl = document.getElementById("sum-el");
-console.log(sumEl);
-let cardEl = document.getElementById("card-el");
-console.log(cardEl);
+let messageEl = document.getElementById("message-el");  //console.log(messageEl);
+let sumEl = document.getElementById("sum-el");          //console.log(sumEl);
+let cardEl = document.getElementById("card-el");        //console.log(cardEl);
+let playerEl = document.getElementById("player-el");    //console.log(playerEl)
 
+let player = {
+    name: "Neo",
+    chips: 200
+}
 let deck = []
 let sum = 0
-
 let hasBlackJack = false    //default answer
 let isAlive = false
-
 let display = ""    //display message so console.log once at the end
+
+playerEl.textContent = player.name + ": R" + player.chips
 
 function getRandomCard(){
     let randomNumer = Math.floor( Math.random()*13 ) + 1
@@ -26,6 +28,7 @@ function getRandomCard(){
 }
 
 function startGame(){
+                                                // edit later playerEl = prompt("Please enter your name")
     isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
