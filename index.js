@@ -18,7 +18,7 @@ let isAlive = true
 let display = ""    //display message so console.log once at the end
 
 function getRandomCard(){
-    return Math.floor(Math.random() * 13) + 2
+    return Math.floor(Math.random() * 13) + 1
 }
 
 function startGame(){
