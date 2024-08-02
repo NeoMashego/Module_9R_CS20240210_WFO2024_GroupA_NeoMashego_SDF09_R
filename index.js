@@ -6,8 +6,8 @@ console.log(sumEl);
 let cardEl = document.getElementById("card-el");
 console.log(cardEl);
 
-let firstCard = 6
-let secondCard = 9
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 
 let sum = firstCard + secondCard
 let deck = [firstCard, secondCard]
@@ -16,6 +16,10 @@ let hasBlackJack = false    //default answer
 let isAlive = true
 
 let display = ""    //display message so console.log once at the end
+
+function getRandomCard(){
+    return Math.floor(Math.random() * 13) + 2
+}
 
 function startGame(){
     renderGame()
@@ -44,7 +48,7 @@ if (sum <= 20){
 }
 
 function newCard(){
-    let card = 6;
+    let card = getRandomCard();
     sum += card;                                            // sum = sum + card
     deck.push(card);
                                                             //console.log(deck);      checking if array works
