@@ -1,4 +1,3 @@
-// notes: let firstCard = math.floor(math.random() * 11) + 2; let secondCard = math.floor(math.random() * 11) + 2; let sum = firstCard + secondCard
 let messageEl = document.getElementById("message-el");  //console.log(messageEl);
 let sumEl = document.getElementById("sum-el");          //console.log(sumEl);
 let cardEl = document.getElementById("card-el");        //console.log(cardEl);
@@ -27,8 +26,8 @@ function getRandomCard(){
     }
 }
 
-function startGame(){
-                                                // edit later playerEl = prompt("Please enter your name")
+// game starter conditions set
+function startGame(){                                               // edit later playerEl = prompt("Please enter your name")
     isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
@@ -39,26 +38,24 @@ function startGame(){
 
 // blackjack conditions set
 function renderGame() {
-if (sum <= 20){
-    display = "Do you want to draw a new card?";
-} else if (sum === 21){
-   display = "Wohoo! You've got Blackjack!";
-    hasBlackJack = true
-} else {
-    display = "Sorry, You're out of the game!";
-    isAlive = false
-}
-
-// CASH OUT
-    messageEl.textContent = display
-    sumEl.textContent = "Sum: " + sum
-    cardEl.textContent = "Card: " //+ deck[0] + " " + deck[1]
-    for (let d = 0; d < deck.length; d++){
-        cardEl.textContent += deck[d] + " "                     // check if it works console.log(deck[d])
+    if (sum <= 20){
+        display = "Do you want to draw a new card?";
+    }   else if (sum === 21){
+    display = "Wohoo! You've got Blackjack!";
+        hasBlackJack = true
+    }   else {
+        display = "Sorry, You're out of the game!";
+        isAlive = false
     }
-                                                                // conditions console.log(hasBlackJack) console.log(isAlive) console.log(display) alert(display)      so an answer can be seen
+        messageEl.textContent = display
+        sumEl.textContent = "Sum: " + sum
+        cardEl.textContent = "Card: "                                   //+ deck[0] + " " + deck[1]
+            for (let d = 0; d < deck.length; d++){
+                cardEl.textContent += deck[d] + " "                     // check if it works console.log(deck[d])
+            }                                                           // conditions console.log(hasBlackJack) console.log(isAlive) console.log(display) alert(display)      so an answer can be seen
 }
 
+// new card conditions
 function newCard(){
     if (isAlive === true && hasBlackJack === false){
         let card = getRandomCard()
