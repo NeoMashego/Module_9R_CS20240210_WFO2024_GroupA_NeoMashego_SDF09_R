@@ -57,9 +57,10 @@ if (sum <= 20){
 }
 
 function newCard(){
-    let card = getRandomCard();
-    sum += card;                                            // sum = sum + card
-    deck.push(card);
-                                                            //console.log(deck);      checking if array works
-    renderGame();
+    if (isAlive === true && hasBlackJack === false){
+        let card = getRandomCard()
+        sum += card;                                             // sum = sum + card
+        deck.push(card); 
+        renderGame();
+    }
 }
