@@ -36,14 +36,17 @@ if (sum <= 20){
 // CASH OUT
     messageEl.textContent = display
     sumEl.textContent = "Sum: " + sum
-    cardEl.textContent = "Card: " + deck[0] + " " + deck[1]
-                    // conditions console.log(hasBlackJack) console.log(isAlive) console.log(display) alert(display)      so an answer can be seen
+    cardEl.textContent = "Card: " //+ deck[0] + " " + deck[1]
+    for (let d = 0; d < deck.length; d++){
+        cardEl.textContent += deck[d] + " "                     // check if it works console.log(deck[d])
+    }
+                                                                // conditions console.log(hasBlackJack) console.log(isAlive) console.log(display) alert(display)      so an answer can be seen
 }
 
 function newCard(){
     let card = 6;
-    sum += card;            // sum = sum + card
+    sum += card;                                            // sum = sum + card
     deck.push(card);
-                            //console.log(deck);      checking if array works
+                                                            //console.log(deck);      checking if array works
     renderGame();
 }
