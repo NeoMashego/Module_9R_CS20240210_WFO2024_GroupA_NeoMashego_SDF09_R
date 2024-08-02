@@ -6,14 +6,11 @@ console.log(sumEl);
 let cardEl = document.getElementById("card-el");
 console.log(cardEl);
 
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-
-let sum = firstCard + secondCard
-let deck = [firstCard, secondCard]
+let deck = []
+let sum = 0
 
 let hasBlackJack = false    //default answer
-let isAlive = true
+let isAlive = false
 
 let display = ""    //display message so console.log once at the end
 
@@ -29,6 +26,11 @@ function getRandomCard(){
 }
 
 function startGame(){
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    deck = [firstCard, secondCard]
+    sum = firstCard + secondCard
     renderGame()
 }
 
